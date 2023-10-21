@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	TransactionPeding    string = "pending"
+	TransactionPending   string = "pending"
 	TransactionCompleted string = "completed"
 	TransactionError     string = "error"
 	TransactionCancelled string = "cancelled"
@@ -72,7 +72,7 @@ func (t *Transaction) isValid() error {
 		return errors.New("the amount must be greater than 0")
 	}
 
-	if t.Status != TransactionPeding &&
+	if t.Status != TransactionPending &&
 		t.Status != TransactionCompleted &&
 		t.Status != TransactionError &&
 		t.Status != TransactionCancelled &&
@@ -102,7 +102,7 @@ func NewTransaction(
 		AccountFrom: accountFrom,
 		Amount:      amount,
 		PixKeyTo:    pixKeyTo,
-		Status:      TransactionPeding,
+		Status:      TransactionPending,
 		Description: description,
 	}
 
