@@ -2,8 +2,8 @@ package repository
 
 import (
 	"errors"
+	"github.com/jinzhu/gorm"
 	"github.com/rafikmoreira/codepix/domain/model"
-	"gorm.io/gorm"
 )
 
 type PixKeyRepositoryDb struct {
